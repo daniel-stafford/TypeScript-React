@@ -1,15 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import { Head } from "./components/Head"
+import { Button } from "./components/Button"
+import logo from "./logo.svg"
+import "./App.css"
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <div className="App">
+      <Head title="Hello" isActive={false} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <Button
+          onClick={value => {
+            console.log(value)
+          }}
+        />
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -20,7 +28,7 @@ const App: React.FC = () => {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
