@@ -5,9 +5,11 @@ type Props = {
   // onClick(): void method return nothings like a console.log
   // onClick(text: string): void method with parameters
   // onClick: () => void
-  onClick: (text: string) => void //function with parameters
+  // onClick: (e: React.MouseEvent) => void //basic mouse e
+  // onChange?: (e: React.FormEvent<HTMLInputElement>) => void // basic input event
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void //more specific event type
 }
 
 export const Button = ({ onClick }: Props) => {
-  return <button onClick={() => onClick("Hello")}>Click me</button>
+  return <button onClick={onClick}>Click me</button>
 }

@@ -14,8 +14,9 @@ const App = () => {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <Button
-          onClick={value => {
-            console.log(value)
+          onClick={e => {
+            e.preventDefault()
+            console.log(e)
           }}
         />
         <a
