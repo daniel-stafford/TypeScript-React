@@ -9,16 +9,17 @@ const App = () => {
     <div className="App">
       <Head title="Hello" isActive={false} />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
         <Button
           onClick={e => {
             e.preventDefault()
             console.log(e)
           }}
-        />
+        >
+          <img src={logo} className="App-logo" alt="logo" />
+        </Button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
         <a
           className="App-link"
           href="https://reactjs.org"

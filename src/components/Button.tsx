@@ -10,6 +10,9 @@ type Props = {
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void //more specific event type
 }
 
-export const Button = ({ onClick }: Props) => {
-  return <button onClick={onClick}>Click me</button>
+export const Button: React.FC<Props> = ({ onClick, children }) => {
+  return <button onClick={onClick}>{children}</button>
 }
+
+//if not using children use :Props
+//if using children use React.FC<Props>
